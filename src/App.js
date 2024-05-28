@@ -1,28 +1,22 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-
+import Header from "./components/Header";
+import Post from "./components/Post";
 function App() {
   return (
-    <main>
-      <header>
-        <a href="#" className="logo">
-          MyBlog
-        </a>
-        <nav>
-          <a href="#">Login</a>
-          <a href="#">Register</a>
-        </nav>
-      </header>
-      <div className="entry">
-        <img
-          src="https://blog.wego.com/wp-content/uploads/shutterstock_2289237897.jpg"
-          alt=""
-        />
-        <h2>
-          Halal Holidays Germany: A Friendly Itinerary Through the Land of
-          Innovators and Visionaries
-        </h2>
-      </div>
-    </main>
+    <Routes>
+      <Route
+        index
+        element={
+          <main>
+            <Header />
+            <Post />
+            <Post />
+            <Post />
+          </main>
+        }
+      />
+    </Routes>
   );
 }
 
